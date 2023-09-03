@@ -72,10 +72,13 @@ To scan a music directory, use the `scan` command with the `--path` flag to spec
 poetry run python muscan.py scan --path /path/to/music/directory --scan-name my_scan_name
 ```
 
+#### Also try...
+
+- `exts`: Lists all file extensions present in the database. Optionally, you can filter by a specific scan using the `--scan-name` flag.
+- `list_file_data`: Lists file data for a specific extension with optional `--limit` and `--offset` flags for pagination.
+- `list_diff`: Shows the count of files that are different between two scans specified by `--origin-scan` and `--dest-scan`.
+- `copy_diff_files`: Copies files that are different between two scans into a new folder. Progress is printed for every 250 files copied.
+
 ## SQL Analysis
 
 Once the database is populated, you can run SQL queries for analysis. For example, to find files present in one scan but not another, you can execute SQL queries like the ones in the codebase.
-
----
-
-Feel free to adjust the `README.md` content to better match your project's specific needs.
